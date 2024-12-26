@@ -1,22 +1,30 @@
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useState } from "react";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Contact() {
+  const [isFormLoading, setIsFormLoading] = useState(true);
+
   return (
-    <div className="min-h-screen bg-background relative">
-      {/* Back Button */}
-      <Link
-        href="/"
-        className="fixed top-6 left-6 z-50 p-3 rounded-full bg-white/5 
-          backdrop-blur-sm border border-white/10 text-white/60
-          hover:text-primary transition-all duration-300 group"
-      >
-        <i
-          className="fas fa-arrow-left group-hover:-translate-x-1 
-          transition-transform duration-300"
-        />
-      </Link>
+    <div className="min-h-screen bg-gray-950 relative" data-theme="dark">
+      {/* Navigation Controls */}
+      <div className="fixed top-6 left-6 right-6 z-50 flex justify-between items-center">
+        <Link
+          href="/"
+          className="p-3 rounded-full bg-gray-900 
+            backdrop-blur-sm border border-white/10 
+            text-white/60
+            hover:text-primary transition-all duration-300 group"
+        >
+          <i
+            className="fas fa-arrow-left group-hover:-translate-x-1 
+            transition-transform duration-300"
+          />
+        </Link>
+        {/* <ThemeToggle /> */}
+      </div>
 
       <div className="max-w-4xl mx-auto px-4 py-12">
         <motion.div
@@ -29,7 +37,7 @@ export default function Contact() {
             <h1 className="font-maharlika text-4xl text-primary">
               Get in Touch
             </h1>
-            <p className="font-garet text-white/60">
+            <p className="font-garet text-white">
               Have questions? Wanna Collaborate? We&apos;d love to hear from
               you.
             </p>
@@ -37,17 +45,36 @@ export default function Contact() {
 
           {/* Primary Contact - Google Form */}
           <div
-            className="bg-white/5 backdrop-blur-sm rounded-2xl border 
-            border-white/10 p-6 md:p-8"
+            className="bg-gray-900 backdrop-blur-sm rounded-2xl 
+              border border-white/10 p-6 md:p-8"
           >
-            <div className="aspect-[16/10] w-full">
+            <p className="text-sm text-white/60 mb-4">
+              Note: You can scroll inside the form below
+            </p>
+
+            <div className="relative aspect-[16/10] w-full">
+              {/* Loading Indicator */}
+              {isFormLoading && (
+                <div
+                  className="absolute inset-0 flex flex-col items-center 
+                  justify-center bg-gray-900/90 rounded-xl"
+                >
+                  <div
+                    className="w-12 h-12 border-4 border-primary/20 
+                    border-t-primary rounded-full animate-spin mb-4"
+                  />
+                  <p className="text-white/90">Loading form...</p>
+                </div>
+              )}
+
               <iframe
                 src="https://forms.gle/i8TiNEjXXw97W3iP9"
                 className="w-full h-full rounded-xl"
-                frameBorder="0"
                 allowFullScreen
+                onLoad={() => setIsFormLoading(false)}
               />
             </div>
+
             {/* Open Form Button */}
             <motion.a
               href="https://forms.gle/i8TiNEjXXw97W3iP9"
@@ -70,40 +97,39 @@ export default function Contact() {
               href="mailto:englishlearners18@gmail.com"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border 
-                border-white/10 group hover:bg-white/10 transition-all duration-300"
+              className="p-6 bg-gray-900 backdrop-blur-sm rounded-xl 
+                border border-white/10 group 
+                hover:bg-gray-800 transition-all duration-300"
             >
               <i className="fas fa-envelope text-2xl text-primary mb-4" />
-              <h3 className="font-garet text-lg text-white mb-2">Email Us</h3>
+              <h3 className="font-garet text-lg text-white/90 mb-2">
+                Email Us
+              </h3>
               <p
-                className="text-white/60 group-hover:text-primary 
-                transition-colors duration-300"
+                className="text-white/70 group-hover:text-primary 
+                transition-colors text-sm duration-300"
               >
                 englishlearners18@gmail.com
               </p>
             </motion.a>
 
-            {/* Google Chat */}
-            <motion.a
-              href="https://mail.google.com/chat/u/0/#chat/dm/englishlearners18@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border 
-                border-white/10 group hover:bg-white/10 transition-all duration-300"
+            {/* Google Chat Info */}
+            <div
+              className="p-6 bg-gray-900 backdrop-blur-sm rounded-xl 
+              border border-white/10 
+              sm:col-span-2 lg:col-span-1"
             >
               <i className="fas fa-comment-dots text-2xl text-primary mb-4" />
-              <h3 className="font-garet text-lg text-white mb-2">
+              <h3 className="font-garet text-lg text-white/90 mb-2">
                 Chat with Us
               </h3>
-              <p
-                className="text-white/60 group-hover:text-primary 
-                transition-colors duration-300"
-              >
-                Direct Message on Google Chat
+              <p className="text-white/70">
+                DM us on Google Chat using our email:
+                <span className="block text-sm text-primary mt-1">
+                  englishlearners18@gmail.com
+                </span>
               </p>
-            </motion.a>
+            </div>
 
             {/* Instagram */}
             <motion.a
@@ -112,16 +138,16 @@ export default function Contact() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border 
-                border-white/10 group hover:bg-white/10 transition-all duration-300 
-                sm:col-span-2 lg:col-span-1"
+              className="p-6 bg-gray-900 backdrop-blur-sm rounded-xl 
+                border border-white/10 group 
+                hover:bg-gray-800 transition-all duration-300"
             >
               <i className="fab fa-instagram text-2xl text-primary mb-4" />
-              <h3 className="font-garet text-lg text-white mb-2">
+              <h3 className="font-garet text-lg text-white/90 mb-2">
                 Follow on Instagram
               </h3>
               <p
-                className="text-white/60 group-hover:text-primary 
+                className="text-white/70 group-hover:text-primary 
                 transition-colors duration-300"
               >
                 @englishlearners.ig
