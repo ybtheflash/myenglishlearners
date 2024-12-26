@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "Maharlika";
+  src: url("/fonts/Maharlika-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Garet";
+  src: url("/fonts/Garet-Book.woff2") format("woff2"),
+    url("/fonts/Garet-Book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Garet";
+  src: url("/fonts/Garet-Heavy.woff2") format("woff2"),
+    url("/fonts/Garet-Heavy.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
