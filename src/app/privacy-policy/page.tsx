@@ -108,7 +108,7 @@ export default function PrivacyPolicy() {
 
             <section>
               <h2 className="text-2xl font-semibold mb-4">
-                Children's Privacy
+                Children&apos;s Privacy
               </h2>
               <p>
                 Our services are not directed to children under 13. We do not

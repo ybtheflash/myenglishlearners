@@ -30,7 +30,8 @@ export default function Contact() {
               Get in Touch
             </h1>
             <p className="font-garet text-white/60">
-              Have questions? Wanna Collaborate? We'd love to hear from you.
+              Have questions? Wanna Collaborate? We&apos;d love to hear from
+              you.
             </p>
           </div>
 
