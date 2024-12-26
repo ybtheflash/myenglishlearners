@@ -4,9 +4,9 @@ import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "English Learners by Maithree Roy",
+  title: "English Learners",
   description:
-    "Master English with comprehensive video lessons, interactive content, and expert guidance.",
+    "Happy Learning! Master English with comprehensive video lessons, interactive content, and expert guidance.",
   keywords: [
     "English Learning",
     "English Grammar",
@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     "Online English Course",
     "YouTube English",
     "Literaree",
+    "Happy Learning",
   ],
   authors: [{ name: "Maithree Roy" }],
   creator: "Maithree Roy",
@@ -29,16 +30,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     url: "https://myenglishlearners.in",
-    title: "English Learners by Maithree Roy",
+    title: "English Learners by Maithree Roy - Happy Learning!",
     description:
-      "Master English with comprehensive video lessons, interactive content, and expert guidance.",
+      "Happy Learning! Master English with comprehensive video lessons, interactive content, and expert guidance.",
     siteName: "English Learners",
   },
   twitter: {
     card: "summary_large_image",
-    title: "English Learners by Maithree Roy",
+    title: "English Learners by Maithree Roy - Happy Learning!",
     description:
-      "Master English with comprehensive video lessons, interactive content, and expert guidance.",
+      "Happy Learning! Master English with comprehensive video lessons, interactive content, and expert guidance.",
   },
   viewport: {
     width: "device-width",
