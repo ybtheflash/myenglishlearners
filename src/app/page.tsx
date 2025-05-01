@@ -7,6 +7,8 @@ import VideosSection from "@/components/VideosSection";
 import ShopSection from "@/components/ShopSection";
 import ConnectSection from "@/components/ConnectSection";
 import { LoadingScreen } from "@/components/LoadingScreen";
+import { ResultsAdSection } from "@/components/ResultsAdSection";
+
 // Scroll to top button
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -86,6 +88,9 @@ export default function Home() {
           transition={{ duration: 0.5, delay: isLoading ? 2.2 : 0.2 }}
         >
           <Hero />
+
+          {/* Results Advertisement Section */}
+          <ResultsAdSection />
 
           <motion.div
             initial={{ opacity: 0 }}
