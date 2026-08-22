@@ -53,5 +53,4 @@ export async function GET(request: Request) {
 }
 
 // Add cache headers
-export const runtime = 'edge'
 export const revalidate = 3600 // Cache for 1 hour

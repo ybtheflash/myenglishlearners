@@ -31,10 +31,10 @@ export function ResultsAdSection() {
         />
         <div className="relative z-20 text-center w-full">
           <h2 className="font-maharlika text-3xl md:text-4xl text-primary mb-2">
-            CISCE Results 2025
+            CISCE Results — Proof of Excellence
           </h2>
           <p className="font-garet text-lg md:text-xl text-text/90 mb-6">
-            Offline Batch Results are out! Check your results now.
+            Celebrating the stellar academic performance and outstanding achievements of our offline batch.
           </p>
           <motion.a
             href="https://result.myenglishlearners.in/"
@@ -43,7 +43,7 @@ export function ResultsAdSection() {
             className="inline-block px-7 py-3 rounded-full font-garet font-semibold text-base bg-primary/10 text-primary border border-primary/30 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all duration-300 hover:bg-primary/20 hover:text-primary-dark"
             whileHover={{ scale: 1.05 }}
           >
-            View Results
+            View Results & Top Performers
           </motion.a>
         </div>
       </motion.div>

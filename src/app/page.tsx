@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import VideosSection from "@/components/VideosSection";
-import ShopSection from "@/components/ShopSection";
 import ConnectSection from "@/components/ConnectSection";
 import { LoadingScreen } from "@/components/LoadingScreen";
 import { ResultsAdSection } from "@/components/ResultsAdSection";
@@ -98,7 +97,6 @@ export default function Home() {
             transition={{ duration: 0.5, delay: isLoading ? 2.4 : 0.4 }}
           >
             <VideosSection />
-            <ShopSection />
             <ConnectSection />
           </motion.div>
         </motion.div>

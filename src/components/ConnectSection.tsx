@@ -270,29 +270,32 @@ const Footer = () => {
         </div>
 
         {/* Copyright with Modal Trigger */}
-        <div className="py-4 text-center text-white/40 text-sm">
-          <motion.button
-            onClick={() => setIsModalOpen(true)}
-            className="inline-flex items-center gap-1 hover:text-primary/80 
-              transition-colors duration-300 group"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            Developed with{" "}
-            <motion.i
-              className="fas fa-heart text-primary mx-1"
-              animate={{
-                scale: [1, 1.2, 1],
-                transition: {
-                  repeat: Infinity,
-                  duration: 1.5,
-                  ease: "easeInOut",
-                },
-              }}
-              aria-hidden="true"
-            />{" "}
-            by ybtheflash
-          </motion.button>
+        <div className="py-4 text-center text-white/40 text-sm space-y-2">
+          <p>© 2026 English Learners. All Rights Reserved.</p>
+          <div>
+            <motion.button
+              onClick={() => setIsModalOpen(true)}
+              className="inline-flex items-center gap-1 hover:text-primary/80 
+                transition-colors duration-300 group"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              Developed with{" "}
+              <motion.i
+                className="fas fa-heart text-primary mx-1"
+                animate={{
+                  scale: [1, 1.2, 1],
+                  transition: {
+                    repeat: Infinity,
+                    duration: 1.5,
+                    ease: "easeInOut",
+                  },
+                }}
+                aria-hidden="true"
+              />{" "}
+              by ybtheflash
+            </motion.button>
+          </div>
         </div>
       </div>
 

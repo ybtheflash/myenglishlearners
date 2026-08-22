@@ -1,7 +1,13 @@
-import type { Metadata } from "next";
-import { ThemeProvider } from "next-themes";
+import type { Metadata, Viewport } from "next";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
 
 export const metadata: Metadata = {
   title: "English Learners",
@@ -41,11 +47,6 @@ export const metadata: Metadata = {
     description:
       "Happy Learning! Master English with comprehensive video lessons, interactive content, and expert guidance.",
   },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-  },
   robots: {
     index: true,
     follow: true,
@@ -66,12 +67,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        {/* Font Awesome */}
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        />
+      <head suppressHydrationWarning>
 
         {/* Preload fonts */}
         <link
@@ -94,8 +90,12 @@ export default function RootLayout({
 
         {/* PWA primary color */}
         <meta name="theme-color" content="#ae8fc6" />
+
+        {/* Preconnect to external domains */}
+        <link rel="preconnect" href="https://www.youtube.com" />
+        <link rel="preconnect" href="https://i.ytimg.com" />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <ThemeProvider
           attribute="data-theme"
           defaultTheme="light"
@@ -105,10 +105,6 @@ export default function RootLayout({
           {children}
           <Analytics />
         </ThemeProvider>
-
-        {/* Preconnect to external domains */}
-        <link rel="preconnect" href="https://www.youtube.com" />
-        <link rel="preconnect" href="https://i.ytimg.com" />
       </body>
     </html>
   );

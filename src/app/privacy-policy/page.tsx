@@ -39,10 +39,6 @@ export default function PrivacyPolicy() {
                   <strong>Contact Information:</strong> Email address when you
                   contact us or subscribe to our services.
                 </li>
-                <li>
-                  <strong>Purchase Information:</strong> When you make purchases
-                  through our shop, we collect necessary transaction details.
-                </li>
               </ul>
             </section>
 
@@ -53,7 +49,6 @@ export default function PrivacyPolicy() {
               <p>We use your information to:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Provide and improve our educational services</li>
-                <li>Process your purchases and deliver digital products</li>
                 <li>Respond to your inquiries and support requests</li>
                 <li>Send important updates about our services</li>
                 <li>Improve our website and user experience</li>
@@ -76,7 +71,6 @@ export default function PrivacyPolicy() {
               </h2>
               <p>We use trusted third-party services for:</p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Payment processing (Shopify)</li>
                 <li>Video hosting (YouTube)</li>
                 <li>Website analytics</li>
               </ul>
